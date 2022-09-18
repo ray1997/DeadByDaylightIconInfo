@@ -52,7 +52,7 @@ internal static class CSV
 
     #region Generic File name > Name items
     public static Dictionary<string, Portrait> GetPortraits()
-        => GetGenerics<Portrait>(PortraitCSVFile);
+        => GetGenericsWithFolder<Portrait>(PortraitCSVFile);
 
     public static Dictionary<string, DailyRitual> GetDailyRituals()
         => GetGenerics<DailyRitual>(DailyRitualCSVFile);

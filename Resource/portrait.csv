@@ -1,61 +1,61 @@
-File,Name
-AF_charSelect_portrait,Adam Francis
-AV_charSelect_portrait,Ace Visconti
-BE_charSelect_portrait,The Huntress
-BO_charSelect_portrait,William "Bill" Overbeck
-CA_charSelect_portrait,The Cannibal
-CM_charSelect_portrait,Claudette Morel
-DF_charSelect_portrait,Dwight Fairfield
-DK_charSelect_portrait,David King
-DO_charSelect_portrait,The Doctor
-FK_charSelect_portrait,The Pig
-FM_charSelect_portrait,Feng Min
-FS_charSelect_portrait,Detective David Tapp
-GK_charSelect_portrait,The Clown
-GS_charSelect_portrait,Kate Denson
-HA_charSelect_portrait,The Hag
-HB_charSelect_portrait,The Hillbilly
-HK_charSelect_portrait,The Spirit
-JP_charSelect_portrait,Jake Park
-K20_charSelect_portrait,The Executioner
-K21_charSelect_portrait,The Blight
-K22_charSelect_portrait,The Twins
-K23_charSelect_portrait,The Trickster
-K24_charSelect_portrait,The Nemesis
-K25_charSelect_portrait,The Cenobite
-K27_charSelect_portrait,The Onryō
-K28_charSelect_portrait,The Dredge
-KK_charSelect_portrait,The Legion
-KS_charSelect_portrait,Jeffrey "Jeff" Johansen
-LS_charSelect_portrait,Laurie Strode
-MK_charSelect_portrait,The Plague
-MS_charSelect_portrait,Jane Romero
-MS2_charSelect_portrait,Ashley J. Williams
-MT_charSelect_portrait,Meg Thomas
-NK_charSelect_portrait,Nea Karlsson
-NR_charSelect_portrait,The Nurse
-OK_charSelect_portrait,The Ghost Face
-QF_charSelect_portrait,Nancy Wheeler
-QK_charSelect_portrait,The Demogorgon
-QM_charSelect_portrait,Steve Harrington
-QS_charSelect_portrait,Quentin Smith
-S22_charSelect_portrait,Cheryl Mason
-S22J_charSelect_portrait,James Sunderland
-S23_charSelect_portrait,Felix Richter
-S24_charSelect_portrait,Élodie Rakoto
-S25_charSelect_portrait,Yun-Jin Lee
-S26_charSelect_portrait,Jill Valentine
-S27_charSelect_portrait,Leon Scott Kennedy
-S28_charSelect_portrait,Mikaela Reid
-S30_charSelect_portrait,Yoichi Asakawa
-S31_charSelect_portrait,Haddie Kaur
-SD_charSelect_portrait,The Nightmare
-SH_charSelect_portrait,The Shape
-SK_charSelect_portrait,The Oni
-SS_charSelect_portrait,Yui Kimura
-T_K26_charSelect_portrait,The Artist
-T_S29_charSelect_portrait,Jonah Vasquez
-TR_charSelect_portrait,The Trapper
-UK_charSelect_portrait,The Deathslinger
-US_charSelect_portrait,Zarina Kassir
-WR_charSelect_portrait,The Wraith
+Folder,File,Name
+Haiti,AF_charSelect_portrait,Adam Francis
+DLC3,AV_charSelect_portrait,Ace Visconti
+DLC5,BE_charSelect_portrait,The Huntress
+L4D,BO_charSelect_portrait,William "Bill" Overbeck
+Cannibal,CA_charSelect_portrait,The Cannibal
+,CM_charSelect_portrait,Claudette Morel
+,DF_charSelect_portrait,Dwight Fairfield
+DLC5,DK_charSelect_portrait,David King
+DLC4,DO_charSelect_portrait,The Doctor
+Finland,FK_charSelect_portrait,The Pig
+DLC4,FM_charSelect_portrait,Feng Min
+Finland,FS_charSelect_portrait,Detective David Tapp
+Guam,GK_charSelect_portrait,The Clown
+Guam,GS_charSelect_portrait,Kate Denson
+DLC3,HA_charSelect_portrait,The Hag
+,HB_charSelect_portrait,The Hillbilly
+Haiti,HK_charSelect_portrait,The Spirit
+,JP_charSelect_portrait,Jake Park
+Wales,K20_charSelect_portrait,The Executioner
+Yemen,K21_charSelect_portrait,The Blight
+Aurora,K22_charSelect_portrait,The Twins
+Comet,K23_charSelect_portrait,The Trickster
+Eclipse,K24_charSelect_portrait,The Nemesis
+Gemini,K25_charSelect_portrait,The Cenobite
+Kepler,K27_charSelect_portrait,The Onryō
+Meteor,K28_charSelect_portrait,The Dredge
+Kenya,KK_charSelect_portrait,The Legion
+Kenya,KS_charSelect_portrait,Jeffrey "Jeff" Johansen
+DLC2,LS_charSelect_portrait,Laurie Strode
+Mali,MK_charSelect_portrait,The Plague
+Mali,MS_charSelect_portrait,Jane Romero
+Ash,MS2_charSelect_portrait,Ashley J. Williams
+,MT_charSelect_portrait,Meg Thomas
+,NK_charSelect_portrait,Nea Karlsson
+,NR_charSelect_portrait,The Nurse
+Oman,OK_charSelect_portrait,The Ghost Face
+Qatar,QF_charSelect_portrait,Nancy Wheeler
+Qatar,QK_charSelect_portrait,The Demogorgon
+Qatar,QM_charSelect_portrait,Steve Harrington
+England,QS_charSelect_portrait,Quentin Smith
+Wales,S22_charSelect_portrait,Cheryl Mason
+Hubble,S22J_charSelect_portrait,James Sunderland
+Yemen,S23_charSelect_portrait,Felix Richter
+Aurora,S24_charSelect_portrait,Élodie Rakoto
+Comet,S25_charSelect_portrait,Yun-Jin Lee
+Eclipse,S26_charSelect_portrait,Jill Valentine
+Eclipse,S27_charSelect_portrait,Leon Scott Kennedy
+Hubble,S28_charSelect_portrait,Mikaela Reid
+Kepler,S30_charSelect_portrait,Yoichi Asakawa
+Meteor,S31_charSelect_portrait,Haddie Kaur
+England,SD_charSelect_portrait,The Nightmare
+DLC2,SH_charSelect_portrait,The Shape
+Sweden,SK_charSelect_portrait,The Oni
+Sweden,SS_charSelect_portrait,Yui Kimura
+Ion,T_K26_charSelect_portrait,The Artist
+Ion,T_S29_charSelect_portrait,Jonah Vasquez
+,TR_charSelect_portrait,The Trapper
+Ukraine,UK_charSelect_portrait,The Deathslinger
+Ukraine,US_charSelect_portrait,Zarina Kassir
+,WR_charSelect_portrait,The Wraith
