@@ -1,61 +1,61 @@
 Folder,File,Name,For,Owner
-,iconAddon_brokenFlashlightBulb,Broken Bulb,Flashlight
-,iconAddon_battery,Battery,Flashlight
-,iconAddon_focusLens,Focus Lens,Flashlight
-,iconAddon_heavyDutyBattery,Heavy Duty Battery,Flashlight
-,iconAddon_highEndSapphireLens,High-End Sapphire Lens,Flashlight
-,iconAddon_intenseHalogen,Intense Halogen,Flashlight
-,iconAddon_leatherGrip,Leather Grip,Flashlight
-,iconAddon_longLifeBattery,Long Life Battery,Flashlight
-,iconAddon_oddBulb,Odd Bulb,Flashlight
-,iconAddon_powerBulb,Power Bulb,Flashlight
-,iconAddon_rubberGrip,Rubber Grip,Flashlight
-,iconAddon_threadedFilament,Low Amp Filament,Flashlight
-,iconAddon_tirOptic,TIR Optic,Flashlight
-,iconAddon_wideLens,Wide Lens,Flashlight
-,iconAddon_bloodAmber,Blood Amber,Key
-,iconAddon_milkyGlass,Milky Glass,Key
-,iconAddon_prayerBeads,Prayer Beads,Key
-,iconAddon_prayerRope,Prayer Rope,Key
-,iconAddon_scratchedPearl,Scratched Pearl,Key
-,iconAddon_tokenErroded,Eroded Token,Key
-,iconAddon_tokenGold,Gold Token,Key
-,iconAddon_uniqueRing,Unique Wedding Ring,Key
-,iconAddon_weavedRing,Weaved Ring,Key
-,iconAddon_beadCrystal,Crystal Bead,Map
-,iconAddon_beadGlass,Glass Bead,Map
-,iconAddon_mapAddendum,Map Addendum,Map
-,iconAddon_retardantJelly,Retardant Jelly,Map
-,iconAddon_ropeBlack,Black Silk Cord,Map
-,iconAddon_ropeRed,Red Twine,Map
-,iconAddon_ropeYellow,Yellow Wire,Map
-,iconAddon_stampOdd,Odd Stamp,Map
-,iconAddon_stampUnusual,Unusual Stamp,Map
-,iconAddon_blightedSyringe,Refined Serum,Med-Kit
-,iconAddon_abdominalDressing,Abdominal Dressing,Med-Kit
-,iconAddon_bandages,Bandages,Med-Kit
-,iconAddon_butterflyTape,Butterfly Tape,Med-Kit
-,iconAddon_gauseRoll,Gauze Roll,Med-Kit
-,iconAddon_gelDressings,Gel Dressings,Med-Kit
-,iconAddon_gloves,Rubber Gloves,Med-Kit
-,iconAddon_needAndThread,Needle & Thread,Med-Kit
-,iconAddon_scissors,Medical Scissors,Med-Kit
-,iconAddon_selfAdherentWrap,Self Adherent Wrap,Med-Kit
-,iconAddon_sponge,Sponge,Med-Kit
-,iconAddon_spoolOfWire,Wire Spool,Med-Kit
-,iconAddon_springClamp,Spring Clamp,Med-Kit
-,iconAddon_stypticAgent,Styptic Agent,Med-Kit
-,iconAddon_surgicalSuture,Surgical Suture,Med-Kit
-,iconAddon_syringe,Anti-Haemorrhagic Syringe,Med-Kit
-,iconAddon_brandNewPart,Brand New Part,Toolbox
-,iconAddon_cleanRag,Clean Rag,Toolbox
-,iconAddon_cuttingWire,Cutting Wire,Toolbox
-,iconAddon_gripWrench,Grip Wrench,Toolbox
-,iconAddon_instructions,Instructions,Toolbox
-,iconAddon_metalSaw,Hacksaw,Toolbox
-,iconAddon_protectiveGloves,Protective Gloves,Toolbox
-,iconAddon_scraps,Scraps,Toolbox
-,iconAddon_socketSwivels,Socket Swivels,Toolbox
+,iconAddon_brokenFlashlightBulb,Broken Bulb,Flashlight,
+,iconAddon_battery,Battery,Flashlight,
+,iconAddon_focusLens,Focus Lens,Flashlight,
+,iconAddon_heavyDutyBattery,Heavy Duty Battery,Flashlight,
+,iconAddon_highEndSapphireLens,High-End Sapphire Lens,Flashlight,
+,iconAddon_intenseHalogen,Intense Halogen,Flashlight,
+,iconAddon_leatherGrip,Leather Grip,Flashlight,
+,iconAddon_longLifeBattery,Long Life Battery,Flashlight,
+,iconAddon_oddBulb,Odd Bulb,Flashlight,
+,iconAddon_powerBulb,Power Bulb,Flashlight,
+,iconAddon_rubberGrip,Rubber Grip,Flashlight,
+,iconAddon_threadedFilament,Low Amp Filament,Flashlight,
+,iconAddon_tirOptic,TIR Optic,Flashlight,
+,iconAddon_wideLens,Wide Lens,Flashlight,
+,iconAddon_bloodAmber,Blood Amber,Key,
+,iconAddon_milkyGlass,Milky Glass,Key,
+,iconAddon_prayerBeads,Prayer Beads,Key,
+,iconAddon_prayerRope,Prayer Rope,Key,
+,iconAddon_scratchedPearl,Scratched Pearl,Key,
+,iconAddon_tokenErroded,Eroded Token,Key,
+,iconAddon_tokenGold,Gold Token,Key,
+,iconAddon_uniqueRing,Unique Wedding Ring,Key,
+,iconAddon_weavedRing,Weaved Ring,Key,
+,iconAddon_beadCrystal,Crystal Bead,Map,
+,iconAddon_beadGlass,Glass Bead,Map,
+,iconAddon_mapAddendum,Map Addendum,Map,
+,iconAddon_retardantJelly,Retardant Jelly,Map,
+,iconAddon_ropeBlack,Black Silk Cord,Map,
+,iconAddon_ropeRed,Red Twine,Map,
+,iconAddon_ropeYellow,Yellow Wire,Map,
+,iconAddon_stampOdd,Odd Stamp,Map,
+,iconAddon_stampUnusual,Unusual Stamp,Map,
+,iconAddon_blightedSyringe,Refined Serum,Med-Kit,
+,iconAddon_abdominalDressing,Abdominal Dressing,Med-Kit,
+,iconAddon_bandages,Bandages,Med-Kit,
+,iconAddon_butterflyTape,Butterfly Tape,Med-Kit,
+,iconAddon_gauseRoll,Gauze Roll,Med-Kit,
+,iconAddon_gelDressings,Gel Dressings,Med-Kit,
+,iconAddon_gloves,Rubber Gloves,Med-Kit,
+,iconAddon_needAndThread,Needle & Thread,Med-Kit,
+,iconAddon_scissors,Medical Scissors,Med-Kit,
+,iconAddon_selfAdherentWrap,Self Adherent Wrap,Med-Kit,
+,iconAddon_sponge,Sponge,Med-Kit,
+,iconAddon_spoolOfWire,Wire Spool,Med-Kit,
+,iconAddon_springClamp,Spring Clamp,Med-Kit,
+,iconAddon_stypticAgent,Styptic Agent,Med-Kit,
+,iconAddon_surgicalSuture,Surgical Suture,Med-Kit,
+,iconAddon_syringe,Anti-Haemorrhagic Syringe,Med-Kit,
+,iconAddon_brandNewPart,Brand New Part,Toolbox,
+,iconAddon_cleanRag,Clean Rag,Toolbox,
+,iconAddon_cuttingWire,Cutting Wire,Toolbox,
+,iconAddon_gripWrench,Grip Wrench,Toolbox,
+,iconAddon_instructions,Instructions,Toolbox,
+,iconAddon_metalSaw,Hacksaw,Toolbox,
+,iconAddon_protectiveGloves,Protective Gloves,Toolbox,
+,iconAddon_scraps,Scraps,Toolbox,
+,iconAddon_socketSwivels,Socket Swivels,Toolbox,
 Aurora,iconAddon_babyTeeth,Baby Teeth,Blood Bond,The Twins
 Aurora,iconAddon_bloodiedBlackHood,Bloody Black Hood,Blood Bond,The Twins
 Aurora,iconAddon_catFigurine,Cat Figurine,Blood Bond,The Twins
