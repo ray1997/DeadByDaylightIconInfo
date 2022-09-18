@@ -1,15 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using IconInfo.Internal;
 
+namespace IconPack.Icon;
 
-namespace IconPack.Icon
+public partial class StatusEffect : ObservableObject, IBasic
 {
-    public partial class StatusEffect : ObservableObject, IBasic
-    {
-        [ObservableProperty]
-        string file;
+    [ObservableProperty]
+    private string file;
 
-        //Power name
-        [ObservableProperty]
-        string name;
-    }
+    //Power name
+    [ObservableProperty]
+    private string name;
 }

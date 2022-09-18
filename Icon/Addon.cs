@@ -1,27 +1,25 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using IconInfo.Internal;
 
-using IconPack.Internal;
+namespace IconPack.Icon;
 
-namespace IconPack.Icon
+public partial class Addon : ObservableObject, IBasic, IFolder
 {
-    public partial class Addon : IBasic, IFolder
-    {
 #nullable enable
-        [ObservableProperty]
-        string? folder;
+    [ObservableProperty]
+    private string? folder;
 #nullable disable
 
-        [ObservableProperty]
-        string file;
+    [ObservableProperty]
+    private string file;
 
-        //Power name
-        [ObservableProperty]
-        string name;
+    //Power name
+    [ObservableProperty]
+    private string name;
 
-        [ObservableProperty]
-        string _for;
+    [ObservableProperty]
+    private string _for;
 
-        [ObservableProperty]
-        string owner;
-    }
+    [ObservableProperty]
+    private string owner;
 }

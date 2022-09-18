@@ -1,22 +1,21 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using IconInfo.Internal;
 
+namespace IconPack.Icon;
 
-namespace IconPack.Icon
+public partial class Perk : ObservableObject, IBasic, IFolder
 {
-    public partial class Perk : ObservableObject, IBasic
-    {
 #nullable enable
-        [ObservableProperty]
-        string? folder;
+    [ObservableProperty]
+    private string? folder;
 #nullable disable
 
-        [ObservableProperty]
-        string file;
+    [ObservableProperty]
+    private string file;
 
-        [ObservableProperty]
-        string name;
+    [ObservableProperty]
+    private string name;
 
-        [ObservableProperty]
-        string owner;
-    }
+    [ObservableProperty]
+    private string owner;
 }

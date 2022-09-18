@@ -1,4 +1,4 @@
-﻿using IconPack.Internal;
+﻿using IconInfo.Internal;
 using IconPack.Icon;
 
 namespace IconInfo

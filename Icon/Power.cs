@@ -1,26 +1,24 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-using IconPack.Internal;
+using IconInfo.Internal;
 
 #nullable enable
-namespace IconPack.Icon
+namespace IconPack.Icon;
+
+public partial class Power : ObservableObject, IBasic, IFolder
 {
-    public partial class Power : ObservableObject, IBasic, IFolder
-    {
 #nullable enable
-        [ObservableProperty]
-        string? folder;
+    [ObservableProperty]
+    private string? folder;
 #nullable disable
 
-        [ObservableProperty]
-        string file;
+    [ObservableProperty]
+    private string file;
 
-        //Power name
-        [ObservableProperty]
-        string name;
+    //Power name
+    [ObservableProperty]
+    private string name;
 
-        //Killer name that use this power
-        [ObservableProperty]
-        string owner;
-    }
+    //Killer name that use this power
+    [ObservableProperty]
+    private string owner;
 }

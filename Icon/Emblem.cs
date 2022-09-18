@@ -1,14 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using IconInfo.Internal;
 
+namespace IconPack.Icon;
 
-namespace IconPack.Icon
+public partial class Emblem : ObservableObject, IBasic
 {
-    public partial class Emblem : ObservableObject, IBasic
-    {
-        [ObservableProperty]
-        string file;
+    [ObservableProperty]
+    private string file;
 
-        [ObservableProperty]
-        string name;
-    }
+    [ObservableProperty]
+    private string name;
 }
