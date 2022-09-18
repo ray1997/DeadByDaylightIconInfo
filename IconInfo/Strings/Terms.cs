@@ -1,5 +1,5 @@
 ﻿namespace IconInfo.Strings;
-internal class Terms
+public class Terms
 {
     /// <summary>
     /// Character portraits folder
