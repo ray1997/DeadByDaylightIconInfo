@@ -22,7 +22,7 @@ internal static class CSV
         var assembly = Assembly.GetExecutingAssembly();
         if (!key.EndsWith(".csv"))
             key += ".csv";
-        string name = $"IconPack.Resource.{key}";
+        string name = $"{nameof(IconInfo)}.Resource.{key}";
 
         return assembly.GetManifestResourceStream(name);
     }
