@@ -1,5 +1,5 @@
 ﻿using CsvHelper.Configuration;
-using IconPack.Icon;
+using IconInfo.Icon;
 
 namespace IconInfo.Internal;
 

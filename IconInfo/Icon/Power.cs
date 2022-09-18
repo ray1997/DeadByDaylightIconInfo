@@ -2,7 +2,7 @@
 using IconInfo.Internal;
 
 #nullable enable
-namespace IconPack.Icon;
+namespace IconInfo.Icon;
 
 public partial class Power : ObservableObject, IBasic, IFolder
 {

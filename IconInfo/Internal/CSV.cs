@@ -1,7 +1,8 @@
 ﻿using IconInfo.Internal;
-using IconPack.Icon;
+using IconInfo.Icon;
 using System.Globalization;
 using System.Reflection;
+using Folder = IconInfo.Strings.Terms;
 
 namespace IconInfo.Internal;
 
@@ -17,19 +18,10 @@ internal static class CSV
             BadDataFound = null
         };
 
-    private static Stream GetCSVStream(string key)
-    {
-        var assembly = Assembly.GetExecutingAssembly();
-        if (!key.EndsWith(".csv"))
-            key += ".csv";
-        string name = $"{nameof(IconInfo)}.Resource.{key}";
+    private static Stream GetCSVStream(string key) => 
+        Assembly.GetExecutingAssembly().
+        GetManifestResourceStream($"{nameof(IconInfo)}.Resource.{key}.csv");
 
-        return assembly.GetManifestResourceStream(name);
-    }
-
-    private const string PortraitCSVFile = "portrait.csv";
-    private const string DailyRitualCSVFile = "dailyritual.csv";
-    private const string StatusEffectCSVFile = "statuseffect.csv";
     private static Dictionary<string, T> GetGenerics<T>(string key) where T : IBasic
     {
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(key)), GetConfig()))
@@ -52,29 +44,27 @@ internal static class CSV
 
     #region Generic File name > Name items
     public static Dictionary<string, Portrait> GetPortraits()
-        => GetGenericsWithFolder<Portrait>(PortraitCSVFile);
+        => GetGenericsWithFolder<Portrait>(Folder.Portrait);
 
     public static Dictionary<string, DailyRitual> GetDailyRituals()
-        => GetGenerics<DailyRitual>(DailyRitualCSVFile);
+        => GetGenerics<DailyRitual>(Folder.DailyRitual);
 
     public static Dictionary<string, Emblem> GetEmblems()
-        => GetGenerics<Emblem>(StatusEffectCSVFile);
+        => GetGenerics<Emblem>(Folder.Emblem);
 
     public static Dictionary<string, StatusEffect> GetStatusEffects()
-        => GetGenerics<StatusEffect>(StatusEffectCSVFile);
+        => GetGenerics<StatusEffect>(Folder.StatusEffect);
     #endregion
 
-    private const string OfferingCSVFile = "offering.csv";
     public static Dictionary<string, Offering> GetOfferings()
-        => GetGenericsWithFolder<Offering>(OfferingCSVFile);
+        => GetGenericsWithFolder<Offering>(Folder.Offering);
 
-    private const string ItemCSVFile = "item.csv";
     public static Dictionary<string, Item> GetItems()
-        => GetGenericsWithFolder<Item>(ItemCSVFile);
+        => GetGenericsWithFolder<Item>(Folder.Item);
 
     public static Dictionary<string, Power> GetPowersFromCSV()
     {
-        using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream("power.csv")), GetConfig()))
+        using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(Folder.Power)), GetConfig()))
         {
             csv.Context.RegisterClassMap<PowerMapper>();
             var records = csv.GetRecords<Power>();
@@ -84,17 +74,17 @@ internal static class CSV
 
     public static Dictionary<string, Addon> GetAddonsFromCSV()
     {
-        using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream("addon.csv")), GetConfig()))
+        using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(Folder.Addon)), GetConfig()))
         {
             csv.Context.RegisterClassMap<AddonMapper>();
             var records = csv.GetRecords<Addon>();
-            return records.ToDictionary(i => $"{i.Folder}/{i.File}");
+            return records.ToDictionary(i => $"{(i.Folder is null ? "" : i.Folder)}/{i.File}");
         }
     }
 
     public static Dictionary<string, Perk> GetPerksFromCSV()
     {
-        using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream("perk.csv")), GetConfig()))
+        using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(Folder.Perk)), GetConfig()))
         {
             csv.Context.RegisterClassMap<PerkMapper>();
             var records = csv.GetRecords<Perk>();

@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using IconInfo.Internal;
 
-namespace IconPack.Icon;
+namespace IconInfo.Icon;
 
 public partial class Perk : ObservableObject, IBasic, IFolder
 {

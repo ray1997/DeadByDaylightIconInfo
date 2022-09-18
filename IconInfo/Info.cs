@@ -1,5 +1,5 @@
 ﻿using IconInfo.Internal;
-using IconPack.Icon;
+using IconInfo.Icon;
 
 namespace IconInfo
 {
@@ -91,7 +91,18 @@ namespace IconInfo
         }
 
         public static Dictionary<string, Addon> GetAddons() => CSV.GetAddonsFromCSV();
+        public static Addon GetAddon(string name, string? folder = null)
+        {
+            if (folder is null)
+                return Addons[$"/{name}"];
+            return Addons[$"{folder}/{name}"];
+        }
         private static Lazy<Dictionary<string, Addon>> _addons;
+        /// <summary>
+        /// Due to icon addons having duplicate the key require folder
+        /// If it's in folder: Xipre/iconAddon_speedLimiter
+        /// if it's not in the folder: iconAddon_ataxicRespiration
+        /// </summary>
         public static Dictionary<string, Addon> Addons
         {
             get
