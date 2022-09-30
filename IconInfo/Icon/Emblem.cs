@@ -7,15 +7,6 @@ public partial class Emblem : ObservableObject, IBasic
 {
     public Emblem() { }
 
-    public Emblem(string fileName)
-    {
-        File = fileName;
-        Name = fileName;
-        var classifiedInfo = ClassifiedEmblem(File);
-        Category = classifiedInfo.category;
-        Quality = classifiedInfo.quality;
-    }
-
     [ObservableProperty]
     private string file;
 
@@ -39,11 +30,25 @@ public partial class Emblem : ObservableObject, IBasic
     /// <returns></returns>
     private static string CapitalizeFirst(ReadOnlySpan<char> input) => $"{input[0].ToString().ToUpper()}{input[1..]}";
 
-    [ObservableProperty]
-    private EmblemCategory category;
+    private EmblemCategory? category;
+    public EmblemCategory Category
+    {
+        get
+        {
+            category ??= ClassifiedEmblem(Name).category;
+            return category.Value;
+        }
+    }
 
-    [ObservableProperty]
-    private EmblemQuality quality;
+    private EmblemQuality? quality;
+    public EmblemQuality Quality
+    {
+        get
+        {
+            quality ??= ClassifiedEmblem(Name).quality;
+            return quality.Value;
+        }
+    }
 }
 
 public enum EmblemCategory

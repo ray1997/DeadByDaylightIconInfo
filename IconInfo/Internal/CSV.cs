@@ -27,6 +27,7 @@ internal static class CSV
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(key)), GetConfig()))
         {
             csv.Context.RegisterClassMap<GenericMapper<T>>();
+            csv.Context.Configuration.HeaderValidated = null;
             var records = csv.GetRecords<T>();
             return records.ToDictionary(i => i.File);
         }
@@ -37,6 +38,7 @@ internal static class CSV
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(key)), GetConfig()))
         {
             csv.Context.RegisterClassMap<GenericWithFolderMapper<T>>();
+            csv.Context.Configuration.HeaderValidated = null;
             var records = csv.GetRecords<T>();
             return records.ToDictionary(i => i.File);
         }
@@ -67,6 +69,7 @@ internal static class CSV
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(Folder.Power)), GetConfig()))
         {
             csv.Context.RegisterClassMap<PowerMapper>();
+            csv.Context.Configuration.HeaderValidated = null;
             var records = csv.GetRecords<Power>();
             return records.ToDictionary(i => i.File);
         }
@@ -77,6 +80,7 @@ internal static class CSV
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(Folder.Addon)), GetConfig()))
         {
             csv.Context.RegisterClassMap<AddonMapper>();
+            csv.Context.Configuration.HeaderValidated = null;
             var records = csv.GetRecords<Addon>();
             return records.ToDictionary(i => $"{(i.Folder is null ? "" : i.Folder)}/{i.File}");
         }
@@ -87,6 +91,7 @@ internal static class CSV
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(Folder.Perk)), GetConfig()))
         {
             csv.Context.RegisterClassMap<PerkMapper>();
+            csv.Context.Configuration.HeaderValidated = null;
             var records = csv.GetRecords<Perk>();
             return records.ToDictionary(i => i.File);
         }
