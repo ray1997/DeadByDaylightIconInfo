@@ -149,4 +149,21 @@ public class MainTest
                 $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on power folder");
         }
     }
+
+    [Fact]
+    public void IsAllEmblemClassifiedCorrect()
+    {
+        DirectoryInfo info = new($"D:\\Dead-by-daylight-Default-icons\\{IconInfo.Strings.Terms.Emblem}");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            foreach (var emblem in Info.Emblems.Values)
+            {
+                Assert.True(emblem.File.Contains(emblem.Category.ToString().ToLower())
+                    && emblem.File.Contains(emblem.Quality.ToText()));
+            }
+        }
+    }
+
+    
 }

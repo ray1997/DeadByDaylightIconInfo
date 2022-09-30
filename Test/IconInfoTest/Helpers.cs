@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IconInfo.Icon;
 
 namespace IconInfoTest;
 internal static class Helpers
@@ -14,4 +15,11 @@ internal static class Helpers
     /// <returns></returns>
     public static string NameWOExt(this FileInfo info) => 
         Path.GetFileNameWithoutExtension(info.FullName);
+
+    public static string ToText(this EmblemQuality quality)
+    {
+        if (quality == EmblemQuality.Iridescent)
+            return "platinum";
+        return quality.ToString().ToLower();
+    }
 }

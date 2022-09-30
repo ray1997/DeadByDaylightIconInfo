@@ -19,7 +19,11 @@ public partial class Emblem : ObservableObject, IBasic
         var c = span[(span.IndexOf('_') + 1)..span.LastIndexOf('_')];
         var q = span[(span.LastIndexOf('_') + 1)..];
         var eCategory = Enum.Parse<EmblemCategory>(CapitalizeFirst(c));
-        var eQuality = Enum.Parse<EmblemQuality>(CapitalizeFirst(q));
+        var eQuality = EmblemQuality.None;
+        if (name.Contains("platinum"))
+            eQuality = EmblemQuality.Iridescent;
+        else
+            eQuality = Enum.Parse<EmblemQuality>(CapitalizeFirst(q));
         return (eCategory, eQuality);
     }
 
@@ -35,7 +39,7 @@ public partial class Emblem : ObservableObject, IBasic
     {
         get
         {
-            category ??= ClassifiedEmblem(Name).category;
+            category ??= ClassifiedEmblem(File).category;
             return category.Value;
         }
     }
@@ -45,7 +49,7 @@ public partial class Emblem : ObservableObject, IBasic
     {
         get
         {
-            quality ??= ClassifiedEmblem(Name).quality;
+            quality ??= ClassifiedEmblem(File).quality;
             return quality.Value;
         }
     }
