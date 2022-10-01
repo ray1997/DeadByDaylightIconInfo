@@ -3,7 +3,7 @@
 /// <summary>
 /// For folders that have subfolders in it
 /// </summary>
-internal interface IFolder
+public interface IFolder
 {
 #nullable enable
     /// <summary>
