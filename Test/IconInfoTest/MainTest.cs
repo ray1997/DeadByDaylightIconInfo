@@ -57,8 +57,33 @@ public class MainTest
             }
             else
             {
-                Assert.True(Info.GetAddon(icon.NameWOExt()) is not null);
+                Assert.True(Info.GetAddon(icon.NameWOExt(), folder:null) is not null);
             }
+        }
+    }
+
+    [Fact]
+    public void IsAllAddonsIconAvailableViaPathGetAddon() //D:\Dead-by-daylight-Default-icons\ItemAddons\itemAddon_something.png
+    {
+        DirectoryInfo info = new("D:\\Dead-by-daylight-Default-icons\\ItemAddons");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            var addon = Info.GetAddon(path: icon.FullName);
+            Assert.True(addon is not null);
+        }
+    }
+
+    [Fact]
+    public void IsAllAddonsIconAvailableViaShortPathGetAddon() //\itemAddon_something.png
+    {
+        DirectoryInfo info = new("D:\\Dead-by-daylight-Default-icons\\ItemAddons");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories)
+            .Select(file => file.FullName.Replace(info.FullName, "").Replace('\\', '/'));
+        foreach (var icon in icons)
+        {
+            var addon = Info.GetAddon(path: icon);
+            Assert.True(addon is not null);
         }
     }
 
@@ -119,8 +144,6 @@ public class MainTest
         var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
         foreach (var icon in icons)
         {
-            if (icon.FullName.EndsWith("iconItems_carriedBody.png"))
-                continue;
             Assert.True(Info.Items.ContainsKey(icon.NameWOExt()),
                 $"Icon {icon.Name} isn't exist on item folder");
         }
@@ -146,7 +169,7 @@ public class MainTest
         foreach (var icon in icons)
         {
             Assert.True(Info.Perks.ContainsKey(icon.NameWOExt()),
-                $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on power folder");
+                $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on perk folder");
         }
     }
 
@@ -165,5 +188,63 @@ public class MainTest
         }
     }
 
-    
+    [Fact]
+    public void IsAllArchiveIconAvailable()
+    {
+        DirectoryInfo info = new($"D:\\Dead-by-daylight-Default-icons\\{IconInfo.Strings.Terms.Archive}");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            Assert.True(Info.Archives.ContainsKey(icon.NameWOExt()),
+            $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on archive folder");
+        }
+    }
+
+    [Fact]
+    public void IsAllHelpIconAvailable()
+    {
+        DirectoryInfo info = new($"D:\\Dead-by-daylight-Default-icons\\{IconInfo.Strings.Terms.Help}");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            Assert.True(Info.Helps.ContainsKey(icon.NameWOExt()),
+            $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on Help folder");
+        }
+    }
+
+    [Fact]
+    public void IsAllHelpLoadingIconAvailable()
+    {
+        DirectoryInfo info = new($"D:\\Dead-by-daylight-Default-icons\\{IconInfo.Strings.Terms.HelpLoading}");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            Assert.True(Info.HelpLoadings.ContainsKey(icon.NameWOExt()),
+            $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on HelpLoading folder");
+        }
+    }
+
+    [Fact]
+    public void IsAllPacksIconAvailable()
+    {
+        DirectoryInfo info = new($"D:\\Dead-by-daylight-Default-icons\\{IconInfo.Strings.Terms.Pack}");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            Assert.True(Info.Packs.ContainsKey(icon.NameWOExt()),
+            $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on pack folder");
+        }
+    }
+
+    [Fact]
+    public void IsAllStoreBackgroundIconAvailable()
+    {
+        DirectoryInfo info = new($"D:\\Dead-by-daylight-Default-icons\\{IconInfo.Strings.Terms.StoreBackground}");
+        var icons = info.GetFiles("*.*", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            Assert.True(Info.StoreBackgrounds.ContainsKey(icon.NameWOExt()),
+            $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on StoreBackground folder");
+        }
+    }
 }
