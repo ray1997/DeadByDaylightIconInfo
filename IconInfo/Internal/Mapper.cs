@@ -55,3 +55,20 @@ internal class PerkMapper : ClassMap<Perk>
     }
 }
 
+internal class FolderMapper : ClassMap<Information.MainFolder>
+{
+    public FolderMapper()
+    {
+        Map(m => m.Folder).Name("Folder");
+        Map(m => m.Name).Name("Name");
+    }
+}
+
+internal class SubFolderMapper : ClassMap<Information.SubFolder>
+{
+    public SubFolderMapper()
+    {
+        Map(m => m.Folder).Name("Folder");
+        Map(m => m.Name).Name("Name");
+    }
+}

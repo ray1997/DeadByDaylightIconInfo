@@ -22,7 +22,7 @@ internal static class CSV
         Assembly.GetExecutingAssembly().
         GetManifestResourceStream($"{nameof(IconInfo)}.Resource.{key}.csv");
 
-    private static Dictionary<string, T> GetGenerics<T>(string key) where T : IBasic
+    public static Dictionary<string, T> GetGenerics<T>(string key) where T : IBasic
     {
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(key)), GetConfig()))
         {
@@ -44,26 +44,6 @@ internal static class CSV
         }
     }
 
-    #region Generic File name > Name items
-    public static Dictionary<string, Portrait> GetPortraits()
-        => GetGenericsWithFolder<Portrait>(Folder.Portrait);
-
-    public static Dictionary<string, DailyRitual> GetDailyRituals()
-        => GetGenerics<DailyRitual>(Folder.DailyRitual);
-
-    public static Dictionary<string, Emblem> GetEmblems()
-        => GetGenerics<Emblem>(Folder.Emblem);
-
-    public static Dictionary<string, StatusEffect> GetStatusEffects()
-        => GetGenerics<StatusEffect>(Folder.StatusEffect);
-    #endregion
-
-    public static Dictionary<string, Offering> GetOfferings()
-        => GetGenericsWithFolder<Offering>(Folder.Offering);
-
-    public static Dictionary<string, Item> GetItems()
-        => GetGenericsWithFolder<Item>(Folder.Item);
-
     public static Dictionary<string, Power> GetPowersFromCSV()
     {
         using (var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream(Folder.Power)), GetConfig()))
@@ -82,7 +62,7 @@ internal static class CSV
             csv.Context.RegisterClassMap<AddonMapper>();
             csv.Context.Configuration.HeaderValidated = null;
             var records = csv.GetRecords<Addon>();
-            return records.ToDictionary(i => $"{(i.Folder is null ? "" : i.Folder)}/{i.File}");
+            return records.ToDictionary(i => $"{i.Folder ?? i.Folder}/{i.File}");
         }
     }
 
@@ -95,5 +75,22 @@ internal static class CSV
             var records = csv.GetRecords<Perk>();
             return records.ToDictionary(i => i.File);
         }
+    }
+
+    public static Dictionary<string, Information.MainFolder> GetFoldersFromCSV()
+    {
+        using var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream("folder")), GetConfig());
+        csv.Context.RegisterClassMap<FolderMapper>();
+        csv.Context.Configuration.HeaderValidated = null;
+        var records = csv.GetRecords<Information.MainFolder>();
+        return records.ToDictionary(i => i.Folder);
+    }
+    public static Dictionary<string, Information.SubFolder> GetSubFoldersFromCSV()
+    {
+        using var csv = new CsvHelper.CsvReader(new StreamReader(GetCSVStream("folder_dlc")), GetConfig());
+        csv.Context.RegisterClassMap<SubFolderMapper>();
+        csv.Context.Configuration.HeaderValidated = null;
+        var records = csv.GetRecords<Information.SubFolder>();
+        return records.ToDictionary(i => i.Folder);
     }
 }

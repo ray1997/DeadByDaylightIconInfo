@@ -45,4 +45,10 @@ public class Terms
     /// Emblems folder
     /// </summary>
     public const string Emblem = "Emblems";
+    /// <summary>
+    /// Archive icons folder
+    /// </summary>
+    public const string Archive = "Archive";
+    public const string Help = "Help";
+    public const string StoreBackground = "StoreBackgrounds";
 }
