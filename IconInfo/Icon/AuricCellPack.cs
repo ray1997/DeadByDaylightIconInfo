@@ -3,7 +3,7 @@ using IconInfo.Internal;
 
 namespace IconInfo.Icon;
 
-public partial class Pack : ObservableObject, IBasic
+public partial class AuricCellPack : ObservableObject, IBasic
 {
     [ObservableProperty]
     private string file;

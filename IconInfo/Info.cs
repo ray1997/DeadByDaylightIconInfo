@@ -201,13 +201,13 @@ public static class Info
         }
     }
 
-    public static Dictionary<string, Pack> GetPacks() => CSV.GetGenerics<Pack>(Terms.Pack);
-    private static Lazy<Dictionary<string, Pack>>? _packs;
-    public static Dictionary<string, Pack> Packs
+    public static Dictionary<string, AuricCellPack> GetPacks() => CSV.GetGenerics<AuricCellPack>(Terms.Pack);
+    private static Lazy<Dictionary<string, AuricCellPack>>? _packs;
+    public static Dictionary<string, AuricCellPack> Packs
     {
         get
         {
-            _packs ??= new(CSV.GetGenerics<Pack>(Terms.Pack));
+            _packs ??= new(CSV.GetGenerics<AuricCellPack>(Terms.Pack));
             return _packs.Value;
         }
     }
