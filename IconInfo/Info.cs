@@ -212,4 +212,53 @@ public static class Info
         }
     }
 
+    public static IBasic? GetIcon(string path)
+    {
+        FileInfo file = new(path);
+        bool hasParentDir = file.Directory is not null;
+        bool isSubDirectory = false;
+        bool isMainDirectory = false;
+        if (hasParentDir)
+        {
+            isSubDirectory = SubFolders.ContainsKey(file.Directory.Name);
+            if (!isSubDirectory)
+                isMainDirectory = Folders.ContainsKey(file.Directory.Name);
+        }
+        if (!isSubDirectory && !isMainDirectory)
+            return null;
+        string name = Path.GetFileNameWithoutExtension(path);
+        try
+        {
+            if (Archives.ContainsKey(name))
+                return Archives[name];
+            else if (Portraits.ContainsKey(name))
+                return Portraits[name];
+            else if (DailyRituals.ContainsKey(name))
+                return DailyRituals[name];
+            else if (Emblems.ContainsKey(name))
+                return Emblems[name];
+            else if (Offerings.ContainsKey(name))
+                return Offerings[name];
+            else if (Helps.ContainsKey(name))
+                return Helps[name];
+            else if (HelpLoadings.ContainsKey(name))
+                return HelpLoadings[name];
+            else if (Items.ContainsKey(name))
+                return Items[name];
+            else if (Packs.ContainsKey(name))
+                return Packs[name];
+            else if (Perks.ContainsKey(name))
+                return Perks[name];
+            else if (Powers.ContainsKey(name))
+                return Powers[name];
+            else if (StatusEffects.ContainsKey(name))
+                return StatusEffects[name];
+            else if (StoreBackgrounds.ContainsKey(name))
+                return StoreBackgrounds[name];
+            else
+                return GetAddon(path);
+        }
+        catch { }
+        return null;
+    }
 }
