@@ -247,4 +247,20 @@ public class MainTest
             $"Icon {icon.Directory.Name}\\{icon.Name} isn't exist on StoreBackground folder");
         }
     }
+
+    [Fact]
+    public void GetAllIcons()
+    {
+        DirectoryInfo info = new($"D:\\Dead-by-daylight-Default-icons\\");
+        var icons = info.GetFiles("*.png", SearchOption.AllDirectories);
+        foreach (var icon in icons)
+        {
+            if (icon.FullName.Contains(".banner.png"))
+                continue;
+            if (icon.FullName.Contains("iconAction_carriedBody"))
+                continue;
+            Assert.True(Info.GetIcon(icon.FullName) is not null,
+            $"{icon.FullName} is an icon??");
+        }
+    }
 }

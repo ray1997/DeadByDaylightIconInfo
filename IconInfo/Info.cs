@@ -256,9 +256,40 @@ public static class Info
             else if (StoreBackgrounds.ContainsKey(name))
                 return StoreBackgrounds[name];
             else
-                return GetAddon(path);
+            {
+                var addons = GetAddon(path);
+                if (addons is not null)
+                    return addons;
+            }
         }
         catch { }
+        var smol = name.ToLower();
+        if (Archives.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found)
+            return Archives[found];
+        else if (Portraits.Keys.FirstOrDefault(i => i.ToLower() == smol) is string fp)
+            return Portraits[fp];
+        else if (DailyRituals.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_dailyritual)
+            return DailyRituals[found_dailyritual];
+        else if (Emblems.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_emblem)
+            return Emblems[found_emblem];
+        else if (Offerings.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_offering)
+            return Offerings[found_offering];
+        else if (Helps.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_help)
+            return Helps[found_help];
+        else if (HelpLoadings.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_helploading)
+            return HelpLoadings[found_helploading];
+        else if (Items.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_item)
+            return Items[found_item];
+        else if (Packs.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_pack)
+            return Packs[found_pack];
+        else if (Perks.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_perk)
+            return Perks[found_perk];
+        else if (Powers.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_power)
+            return Powers[found_power];
+        else if (StatusEffects.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_statuseffect)
+            return StatusEffects[found_statuseffect];
+        else if (StoreBackgrounds.Keys.FirstOrDefault(i => i.ToLower() == smol) is string found_storebackground)
+            return StoreBackgrounds[found_storebackground];
         return null;
     }
 }
