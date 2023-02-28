@@ -225,7 +225,11 @@ public static class Info
                 isMainDirectory = Folders.ContainsKey(file.Directory.Name);
         }
         if (!isSubDirectory && !isMainDirectory)
+        {
+            System.Diagnostics.Debug.WriteLine("Either SubFolder or MainFolder is outdated");
             return null;
+        }
+
         string name = Path.GetFileNameWithoutExtension(path);
         try
         {
